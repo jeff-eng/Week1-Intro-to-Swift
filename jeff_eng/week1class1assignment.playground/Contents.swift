@@ -1,15 +1,23 @@
-//: Playground - noun: a place where people can play
+//Week 1 Class 1 Assignment
 
 import UIKit
 
 //Write a function that takes in a string, checks if it can be converted to a number and if possible, returns a number
-//func numConversionChecker(someString: String) -> Int {
-//    
-//}
+func numConversionChecker(string: String) -> Int? {
+    return Int(string)
+}
+
+numConversionChecker("10")
+numConversionChecker("Sonics")
+
+
+
 
 
 
 //Write a function that takes in a tuple (code, message) and returns a string by using interpolation
+
+
 
 
 
@@ -25,10 +33,13 @@ stringCharacterCount("Hello")
 
 
 
+
+
+
 //Write a function that takes in a string and reverses it. Use a simple for loop
-func stringReverser(string: String) {
-    
-}
+//func stringReverser(string: String) {
+//    
+//}
 
 
 
