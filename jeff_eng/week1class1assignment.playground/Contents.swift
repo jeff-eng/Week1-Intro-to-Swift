@@ -16,8 +16,13 @@ numConversionChecker("Sonics")
 
 
 //Write a function that takes in a tuple (code, message) and returns a string by using interpolation
+func codeBreaker(input: (code: String, message: String)) -> String {
+    return "Your code \(input.code) means \(input.message)"
+}
 
+let tuple: (code: String, message: String) = (code: "!@#$%^#", message: "Hello!")
 
+codeBreaker(tuple)
 
 
 
