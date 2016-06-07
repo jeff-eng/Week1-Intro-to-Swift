@@ -11,18 +11,18 @@ func earth(array: [String]) {
 
 
 
-//Use reduce to create single string from the above array. [“Venus”, “Earth”] would produce “Venus, Earth”
+//DONE: Use reduce to create single string from the above array. [“Venus”, “Earth”] would produce “Venus, Earth”
 let singleStringOfPlanets = planetsWithEarth.reduce("") { (endProduct, planet) -> String in
     return endProduct + planet + ", "
 }
 
 
 
-//Declare and implement a dictionary that can contain as values Strings, Ints, etc
+//DONE: Declare and implement a dictionary that can contain as values Strings, Ints, etc
 let seahawks = [31 : "Kam Chancellor", 25 : "Richard Sherman", 29 : "Earl Thomas"]
 
 
-//Declare a dictionary of string values. Declare a function that takes in a string and searches dictionary for it. Use filter
+//DONE: Declare a dictionary of string values. Declare a function that takes in a string and searches dictionary for it. Use filter
 var sportsLeagues = ["NFL" : "National Football League", "NBA" : "National Basketball Association", "MLB" : "Major League Baseball", "MLS" : "Major League Soccer"]
 
 func fullLeagueName (acronym: String) {
@@ -48,3 +48,14 @@ fullLeagueName("NFL")
 
 
 //Add two numbers without using “+”
+var firstNum = 5
+var secondNum = 10
+
+for _ in 1...firstNum { // Loop the number of times defined in firstNum
+    secondNum += 1      // Add the value of one to secondNum 
+}
+
+
+
+
+
