@@ -2,7 +2,7 @@
 
 import UIKit
 
-//Write a function that takes in an array of strings, checks if array contains “Earth”, if not, adds it otherwise returns
+//TODO: Write a function that takes in an array of strings, checks if array contains “Earth”, if not, adds it otherwise returns
 var planetsWithEarth = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn"]
 
 func earth(array: [String]) {
@@ -37,22 +37,30 @@ fullLeagueName("NFL")
 
 
 
-//Write examples for union, intersect, subtract, exclusive Or set operations
+//DONE: Write examples for union, intersect, subtract, exclusive Or set operations
+let firstAnimalSet: Set = ["Bear", "Rabbit", "Turtle", "Pigeon", "Mole", "Salmon"]
+let secondAnimalSet: Set = ["Platypus", "Turtle", "Emu", "Tiger", "Salmon", "Rat"]
+
+let unionOfAnimals = firstAnimalSet.union(secondAnimalSet) //new set with all the unique values of the two sets
+let intersectOfAnimals = firstAnimalSet.intersect(secondAnimalSet) //new set with only the values in common
+let subtractOfAnimals = firstAnimalSet.subtract(secondAnimalSet) //creates a new set by removing values in first set that appear in the second set
+let exclusiveOrOfAnimals = firstAnimalSet.exclusiveOr(secondAnimalSet) //creates new set by finding matches between the two sets and discarding those values in creation of the new set
+
+
+
+//TODO: Write a function that counts repeating words and prints out the count of each
 
 
 
 
-//Write a function that counts repeating words and prints out the count of each
 
 
-
-
-//Add two numbers without using “+”
+//DONE: Add two numbers without using “+”
 var firstNum = 5
 var secondNum = 10
 
 for _ in 1...firstNum { // Loop the number of times defined in firstNum
-    secondNum += 1      // Add the value of one to secondNum 
+    secondNum += 1      // Add the value of one to secondNum
 }
 
 
