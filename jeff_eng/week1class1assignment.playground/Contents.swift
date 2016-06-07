@@ -42,9 +42,16 @@ stringCharacterCount("Hello")
 
 
 //Write a function that takes in a string and reverses it. Use a simple for loop
-//func stringReverser(string: String) {
-//    
-//}
+func stringReverser(stringInput: String) -> {
+    var reversedString: String = String() //Initialize an empty string
+    
+    for characterIndex in stringInput.characters.count.predecessor().stride(through: 0, by: -1) {
+        let
+    }
+    
+}
+
+
 
 
 
