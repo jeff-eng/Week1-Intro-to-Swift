@@ -67,9 +67,6 @@ var exampleGreeting = greet
 
 exampleGreeting("Batman")
 
-//var exampleGreeting(name: String) = func(name: String) {
-//    return "Good morning \(name). How are you  today?"
-//}
 
 
 
