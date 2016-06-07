@@ -23,6 +23,16 @@ let seahawks = [31 : "Kam Chancellor", 25 : "Richard Sherman", 29 : "Earl Thomas
 
 
 //Declare a dictionary of string values. Declare a function that takes in a string and searches dictionary for it. Use filter
+var sportsLeagues = ["NFL" : "National Football League", "NBA" : "National Basketball Association", "MLB" : "Major League Baseball", "MLS" : "Major League Soccer"]
+
+func fullLeagueName (acronym: String) {
+    sportsLeagues.filter { (key: String, value: String) -> Bool in
+        return key == acronym
+    }
+}
+
+fullLeagueName("NFL")
+
 
 
 
