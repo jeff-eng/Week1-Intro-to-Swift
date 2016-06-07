@@ -42,15 +42,18 @@ stringCharacterCount("Hello")
 
 
 //Write a function that takes in a string and reverses it. Use a simple for loop
-func stringReverser(stringInput: String) -> {
+func stringReverser(stringInput: String) -> String {
     var reversedString: String = String() //Initialize an empty string
     
+    //loop through the string
     for characterIndex in stringInput.characters.count.predecessor().stride(through: 0, by: -1) {
-        let
+        let char = Array(stringInput.characters)
+        reversedString.append(char[characterIndex])
     }
-    
+    return reversedString
 }
 
+stringReverser("Hello")
 
 
 
