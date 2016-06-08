@@ -13,9 +13,17 @@ class TaskItem: Identity {
     let taskName: String
     let dateCreated: NSDate
     var id: String
+    var wasCompleted: Bool
     
-    init(taskName: String, dateCreated: NSDate) {
-        self.taskName = 
+    init(taskName: String) {
+        self.taskName = taskName
+        self.dateCreated = NSDate()
+        self.id = NSUUID().UUIDString
+        self.wasCompleted = false
+    }
+    
+    func taskDescription() -> String {
+        return "Task Name: \(self.taskName) created on \(self.dateCreated) (ID \(self.id))."
     }
     
 }
