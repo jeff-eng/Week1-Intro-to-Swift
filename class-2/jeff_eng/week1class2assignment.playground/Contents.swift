@@ -2,17 +2,23 @@
 
 import UIKit
 
-//TODO: Write a function that takes in an array of strings, checks if array contains “Earth”, if not, adds it otherwise returns
-var planetsWithEarth = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn"]
+//DONE: Write a function that takes in an array of strings, checks if array contains “Earth”, if not, adds it otherwise returns
+var planets = ["Mercury", "Venus", "Mars", "Jupiter", "Saturn"]
 
-func earth(array: [String]) {
-    
+func earthChecker(inout array: [String]) {
+    for _ in planets {
+        if !planets.contains("Earth") {
+            planets.append("Earth")
+        }
+    }
 }
+
+earthChecker(&planets)
 
 
 
 //DONE: Use reduce to create single string from the above array. [“Venus”, “Earth”] would produce “Venus, Earth”
-let singleStringOfPlanets = planetsWithEarth.reduce("") { (endProduct, planet) -> String in
+let singleStringOfPlanets = planets.reduce("") { (endProduct, planet) -> String in
     return endProduct + planet + ", "
 }
 
@@ -49,6 +55,11 @@ let exclusiveOrOfAnimals = firstAnimalSet.exclusiveOr(secondAnimalSet) //creates
 
 
 //TODO: Write a function that counts repeating words and prints out the count of each
+
+
+
+
+
 
 
 
