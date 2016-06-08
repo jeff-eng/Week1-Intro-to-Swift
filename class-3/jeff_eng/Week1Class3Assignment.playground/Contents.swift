@@ -13,13 +13,11 @@ class TaskItem: Identity {
     let taskName: String
     let dateCreated: NSDate
     var id: String
-    var wasCompleted: Bool
     
     init(taskName: String) {
         self.taskName = taskName
         self.dateCreated = NSDate()
         self.id = NSUUID().UUIDString
-        self.wasCompleted = false
     }
     
     func taskDescription() -> String {
@@ -30,9 +28,22 @@ class TaskItem: Identity {
 
 
 //Define ObjectStore protocol with these functions: add:, remove:, objectAtIndex:, count, allObjects.
+protocol ObjectStoreProtocol: class {
+    associatedtype Object: Identity
+    
+    func add(object: Object) //add
+    func remove(object: Object) //remove
+    func objectAtIndex(index: Int) -> Object//objectAtIndex
+    func count() -> Int //count
+    func allObjects() -> [Object] //allObjects
+}
 
 //Extend ObjectStore protocol to provide basic implementation for functions
-
+extension ObjectStoreProtocol {
+    func add(object: Object) {
+        
+    }
+}
 //Create Store singleton that will conform to ObjectStore protocol and implement requirements
 
 //Demonstrate adding / removing of ToDo items.
