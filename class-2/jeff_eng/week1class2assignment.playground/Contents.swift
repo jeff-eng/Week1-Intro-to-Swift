@@ -70,11 +70,27 @@ var arrayOfPets = ["Dog", "Cat", "Dog"]
 var firstNum = 5
 var secondNum = 10
 
-for _ in 1...firstNum { // Loop the number of times defined in firstNum
+for _ in 1...abs(firstNum) { // Loop the number of times defined in firstNum
     secondNum += 1      // Add the value of one to secondNum
 }
 
 
 
+// Write a function that counts repeating words and prints out the count of each
 
+let input = ["one", "two", "three", "one"] // The outcome should be: print one = 2
 
+func countRepeatingWords(input: [String]) -> [String: Int] {
+    var repeating = [String: Int]()
+    
+    for word in input {
+        if repeating[word] == nil {
+            repeating[word] = 1
+        } else {
+            repeating[word] = repeating[word]! + 1
+        }
+    }
+    return repeating
+}
+
+countRepeatingWords(input )
