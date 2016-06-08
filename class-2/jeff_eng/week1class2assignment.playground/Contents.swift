@@ -56,7 +56,7 @@ let exclusiveOrOfAnimals = firstAnimalSet.exclusiveOr(secondAnimalSet) //creates
 
 //TODO: Write a function that counts repeating words and prints out the count of each
 
-
+var arrayOfPets = ["Dog", "Cat", "Dog"]
 
 
 
