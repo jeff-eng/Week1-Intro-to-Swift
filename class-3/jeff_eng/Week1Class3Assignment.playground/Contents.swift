@@ -30,6 +30,7 @@ class TaskItem: Identity {
 //Define ObjectStore protocol with these functions: add:, remove:, objectAtIndex:, count, allObjects.
 protocol ObjectStoreProtocol: class {
     associatedtype Object: Identity
+    var taskItems : [Object] { get set }
     
     func add(object: Object) //add
     func remove(object: Object) //remove
@@ -41,10 +42,33 @@ protocol ObjectStoreProtocol: class {
 //Extend ObjectStore protocol to provide basic implementation for functions
 extension ObjectStoreProtocol {
     func add(object: Object) {
-        
+        self.taskItems.append(object)
+    }
+    
+    func remove(object: Object) {
+        self.taskItems = self.taskItems.filter({ (taskItem) -> Bool in
+            return object.id != taskItem.id
+        })
+    }
+    
+    func objectAtIndex(index: Int) -> Object {
+        return self.taskItems[index]
+    }
+    
+    func count() -> Int {
+        return self.taskItems.count
+    }
+    
+    func allObjects() -> [Object] {
+        return self.taskItems
     }
 }
+
 //Create Store singleton that will conform to ObjectStore protocol and implement requirements
+
+//--->need to create a variable that stores the array of taskItems
+//var taskItems = [Object]()
+
 
 //Demonstrate adding / removing of ToDo items.
 
