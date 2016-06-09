@@ -35,6 +35,8 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let cell = self.tableView.dequeueReusableCellWithIdentifier("todoCell", forIndexPath: indexPath)
         
         // Missing model.
+        let taskItem = Store.shared.allTasks()[indexPath.row]
+        cell.textLabel?.text = "\(taskItem.taskName)"
         // Missing setup.
         
         return cell
@@ -44,7 +46,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return 0
+        return Store.shared.count()  //Added in the code here to get the count of the number of Objects in the array
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
@@ -63,7 +65,9 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     {
         if editingStyle == .Delete {
             
-            // Missing model.
+            // Missing model--[!!!PUT CODE FOR REMOVING TASK ITEM HERE!!!]
+            let taskItem = Store.shared.allTasks()[indexPath.row]
+            Store.shared.remove(taskItem)
             
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Fade)
         }

@@ -16,6 +16,7 @@
 		95B362AB1D0A1A4E0046DC50 /* Identity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B362AA1D0A1A4E0046DC50 /* Identity.swift */; };
 		95B362AD1D0A1ACC0046DC50 /* TaskItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B362AC1D0A1ACC0046DC50 /* TaskItem.swift */; };
 		95B362AF1D0A1BAD0046DC50 /* ObjectStoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B362AE1D0A1BAD0046DC50 /* ObjectStoreProtocol.swift */; };
+		95B362B11D0A1D2F0046DC50 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B362B01D0A1D2F0046DC50 /* Store.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		95B362AA1D0A1A4E0046DC50 /* Identity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identity.swift; sourceTree = "<group>"; };
 		95B362AC1D0A1ACC0046DC50 /* TaskItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskItem.swift; sourceTree = "<group>"; };
 		95B362AE1D0A1BAD0046DC50 /* ObjectStoreProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectStoreProtocol.swift; sourceTree = "<group>"; };
+		95B362B01D0A1D2F0046DC50 /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				95B362AA1D0A1A4E0046DC50 /* Identity.swift */,
 				95B362AC1D0A1ACC0046DC50 /* TaskItem.swift */,
 				95B362AE1D0A1BAD0046DC50 /* ObjectStoreProtocol.swift */,
+				95B362B01D0A1D2F0046DC50 /* Store.swift */,
 			);
 			path = ToDo;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95B362B11D0A1D2F0046DC50 /* Store.swift in Sources */,
 				1CA2F70D1C3C2B6400757A21 /* HomeViewController.swift in Sources */,
 				95B362AD1D0A1ACC0046DC50 /* TaskItem.swift in Sources */,
 				95B362AF1D0A1BAD0046DC50 /* ObjectStoreProtocol.swift in Sources */,
