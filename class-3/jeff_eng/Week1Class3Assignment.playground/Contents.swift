@@ -71,7 +71,7 @@ class Store: ObjectStoreProtocol {
     
     typealias Object = TaskItem
     
-    var taskItems = [Object]() //--->need to create a variable that stores the array of taskItems var taskItems = [Object]()
+    var taskItems = [Object]() //--->need to create a variable that stores the array of taskItems <var taskItems = [Object]()>
 }
 
 
@@ -88,6 +88,8 @@ Store.shared.add(taskThree)
 //Remove task items
 Store.shared.remove(taskOne)
 
+
+//Printing tasks for testing adding and removing purposes
 for task in Store.shared.allTasks() {
     print(task.taskDescription())
 }
