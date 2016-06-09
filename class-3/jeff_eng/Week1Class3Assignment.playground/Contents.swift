@@ -36,7 +36,7 @@ protocol ObjectStoreProtocol: class {
     func remove(object: Object) //remove
     func objectAtIndex(index: Int) -> Object//objectAtIndex
     func count() -> Int //count
-    func allObjects() -> [Object] //allObjects
+    func allTasks() -> [Object] //allObjects
 }
 
 //Extend ObjectStore protocol to provide basic implementation for functions
@@ -59,17 +59,40 @@ extension ObjectStoreProtocol {
         return self.taskItems.count
     }
     
-    func allObjects() -> [Object] {
+    func allTasks() -> [Object] {
         return self.taskItems
     }
 }
 
 //Create Store singleton that will conform to ObjectStore protocol and implement requirements
+class Store: ObjectStoreProtocol {
+    static let shared = Store()
+    private init() {}
+    
+    typealias Object = TaskItem
+    
+    var taskItems = [Object]() //--->need to create a variable that stores the array of taskItems var taskItems = [Object]()
+}
 
-//--->need to create a variable that stores the array of taskItems
-//var taskItems = [Object]()
 
 
-//Demonstrate adding / removing of ToDo items.
+//**Demonstrate adding/removing of ToDo items.**
+let taskOne = TaskItem(taskName: "Finish Reading Assignment")
+let taskTwo = TaskItem(taskName: "Ride bike")
+let taskThree = TaskItem(taskName: "Take a nap")
+
+//Add task items
+Store.shared.add(taskOne)
+Store.shared.add(taskTwo)
+Store.shared.add(taskThree)
+//Remove task items
+Store.shared.remove(taskOne)
+
+for task in Store.shared.allTasks() {
+    print(task.taskDescription())
+}
+
+
+
 
 
