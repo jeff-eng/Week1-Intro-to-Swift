@@ -76,7 +76,7 @@ class Store: ObjectStoreProtocol {
 
 
 
-//**Demonstrate adding/removing of ToDo items.**
+//**Demonstrate adding/removing of ToDo items.**``
 let taskOne = TaskItem(taskName: "Finish Reading Assignment")
 let taskTwo = TaskItem(taskName: "Ride bike")
 let taskThree = TaskItem(taskName: "Take a nap")
