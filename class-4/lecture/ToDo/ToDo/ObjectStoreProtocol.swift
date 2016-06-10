@@ -43,4 +43,8 @@ extension ObjectStoreProtocol {
     func allTasks() -> [Object] {
         return self.taskItems
     }
+    
+    func save() {
+         print("Save method has not been implemented yet")
+    }
 }
